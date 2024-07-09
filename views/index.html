@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./icons/icon.png">
+</head>
+<body>
+    <form action="/" method="POST" class="form">
+        <div class="client-details info-container"> 
+            <h1>Client Details</h1>
+            <div class="double-row">
+                <input type="text" id="firstName" name="firstName" required placeholder="First Name">
+                <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
+            </div>
+            <input type="text" id="phone" name="phone" required placeholder="Phone">
+            <input type="text" id="email" name="email" placeholder="Email (optional)">
+        </div>
+    
+        <div class="job-details info-container">
+            <h1>Job Details</h1>
+            <div class="double-row">
+                <select id="job-type" name="jobType" required>
+                    <option value="" disabled selected hidden>Job Type</option>
+                    <option value="Type 1">Type 1</option>
+                    <option value="Type 2">Type 2</option>
+                    <option value="Type 3">Type 3</option>
+                </select>
+    
+                <select id="job-sources" name="jobSource" required>
+                    <option value="" disabled selected hidden>Job Source</option>
+                    <option value="Source 1">Source 1</option>
+                    <option value="Source 2">Source 2</option>
+                    <option value="Source 3">Source 3</option>
+                </select>
+            </div>
+            <textarea id="job-descr" name="jobDescr" placeholder="Job Description (optional)"></textarea>
+        </div>
+    
+        <div class="service-location info-container">
+            <h1>Service Location</h1>
+            <input type="text" id="address" name="address" required placeholder="Address">
+            <input type="text" id="city" name="city" required placeholder="City">
+            <input type="text" id="state" name="state" required placeholder="State">
+            <div class="double-row">
+                <input type="text" id="zip-code" name="zipCode" required placeholder="Zip Code">
+                
+                <select id="area" name="area" required>
+                    <option value="" disabled selected hidden>Area</option>
+                    <option value="Area 1">Area 1</option>
+                    <option value="Area 2">Area 2</option>
+                    <option value="Area 3">Area 3</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="scheduled info-container">
+            <h1>Scheduled</h1>
+            <input type="text" 
+            id="start-date" 
+            name="startDate"
+            onfocus="(this.type='date')"
+            onblur="(this.type='text')" 
+            placeholder="Start Date"/>
+    
+            <div class="double-row">
+                <input type="text" 
+                id="start-time" 
+                name="startTime"
+                required 
+                onfocus="(this.type='time')"
+                onblur="(this.type='text')" 
+                placeholder="Start Time"/>
+    
+                <input type="text" 
+                id="end-time" 
+                name="endTime"
+                required 
+                onfocus="(this.type='time')"
+                onblur="(this.type='text')" 
+                placeholder="End Time"/>
+            </div>
+    
+            <select id="test" name="test" required>
+                <option value="" disabled selected hidden>Test</option>
+                <option value="Test 1">Test 1</option>
+                <option value="Test 2">Test 2</option>
+                <option value="Test 3">Test 3</option>
+            </select>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+        <button id="save" type="button">Save</button>
+    </form>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
